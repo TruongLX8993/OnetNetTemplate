@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\OneNet.Core\OneNet.Core.csproj" />
+      <ProjectReference Include="..\OneNet.Base\OneNet.Base.csproj" />
       <ProjectReference Include="..\OneNet.Customer\OneNet.Customer.csproj" />
     </ItemGroup>
 

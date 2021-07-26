@@ -1,4 +1,4 @@
-﻿namespace OneNet.Core.Application
+﻿namespace OneNet.Base.Application
 {
     public class Response 
     {

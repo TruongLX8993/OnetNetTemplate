@@ -1,19 +1,19 @@
 ﻿using System.Collections.Generic;
 
-namespace OneNet.Core.Domain
+namespace OneNet.Base.Domain
 {
-    public class BaseEntity
+    public class BaseEntity<TKey>
     {
         private IList<BaseEvent> _events = new List<BaseEvent>();
+        public virtual TKey Id { get; set; }
 
-        public void CleanEvent()
+        public virtual void CleanEvent()
         {
             _events.Clear();
         }
 
-        public void Raise()
+        public virtual void Raise()
         {
-            
         }
     }
 }

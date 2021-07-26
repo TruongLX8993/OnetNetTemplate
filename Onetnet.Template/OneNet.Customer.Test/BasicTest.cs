@@ -4,10 +4,8 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
-using OneNet.Core.Application;
-using OneNet.Customer.Application.Create;
-using OneNet.Customer.Infrastructure.Repository;
-using OneNet.Customer.Repository;
+using OneNet.Customer.Application.Queries;
+using OneNet.Customer.Infrastructure;
 
 namespace OneNet.Customer.Test
 {
@@ -19,36 +17,20 @@ namespace OneNet.Customer.Test
         public void Setup()
         {
             _serviceProvider = new ServiceCollection()
-                .AddTransient<ICustomerRepository, CustomerRepository>()
+                .RegisFra()
                 .AddMediatR(Assembly.Load("OneNet.Customer"))
                 .BuildServiceProvider();
         }
 
         [Test]
-        public async Task CreateCustomerCommandTest()
+        public async Task Test()
         {
-            var cusService = new CreateCustomerService(_serviceProvider.GetService<ICustomerRepository>());
-            var res = await cusService.Create(new CreateCustomerDto()
+            var request = new CustomerQuery()
             {
-                Name = "truonglx"
-            });
-
-            Assert.IsTrue(res.Status);
-        }
-
-        [Test]
-        public async Task CreateCustomerCommandTest2()
-        {
-            var req = new Request<CreateCustomerDto, CreateCustomerResponse>
-            {
-                RequestContent = new CreateCustomerDto() {Name = "truonglx"}
+                Name = "truonglx",
             };
             var mediator = _serviceProvider.GetService<IMediator>();
-            if (mediator != null)
-            {
-                var res = await mediator.Send(req);
-                Assert.IsTrue(res.Status);
-            }
+            var res = await mediator.Send(request);
         }
     }
 }

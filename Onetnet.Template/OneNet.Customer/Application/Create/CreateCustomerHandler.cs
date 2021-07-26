@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using OneNet.Core.Application;
-using OneNet.Customer.Repository;
+using OneNet.Base.Application;
+using OneNet.Customer.Data;
 
 namespace OneNet.Customer.Application.Create
 {

@@ -1,4 +1,4 @@
-﻿namespace OneNet.Core.Domain
+﻿namespace OneNet.Base.Domain
 {
     public class BaseEvent
     {

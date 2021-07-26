@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneNet.Core", "OneNet.Core\OneNet.Core.csproj", "{00373E0D-3657-44C8-8737-92DD85806E13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneNet.Base", "OneNet.Base\OneNet.Base.csproj", "{00373E0D-3657-44C8-8737-92DD85806E13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneNet.Customer", "OneNet.Customer\OneNet.Customer.csproj", "{DE96FBB0-A1DD-4E48-8FCA-2F34885BF73D}"
 EndProject

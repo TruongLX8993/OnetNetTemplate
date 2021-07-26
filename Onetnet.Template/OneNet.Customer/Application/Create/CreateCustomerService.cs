@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using OneNet.Customer.Repository;
+using OneNet.Customer.Data;
 
 namespace OneNet.Customer.Application.Create
 {

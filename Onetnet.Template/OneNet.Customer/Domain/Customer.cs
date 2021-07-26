@@ -1,13 +1,12 @@
 ﻿using System;
-using OneNet.Core.Domain;
+using OneNet.Base.Domain;
 
 namespace OneNet.Customer.Domain
 {
-    public class Customer : BaseEntity
+    public class Customer : BaseEntity<int>
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Phone { get; set; }
-        public string Address { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Phone { get; set; }
+        public virtual string Address { get; set; }
     }
 }
